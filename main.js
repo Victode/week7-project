@@ -15,21 +15,23 @@ function displayQuestions(data) {
     let questionHTML = ''
     let question = data.question
     console.log(question)
+    i = 0
     for (let quiz of data) {
         console.log(quiz)
         questionHTML += `
             <div class="card mb-5">
-                <div class="card-body" id="result">
+                <div class="card-body" id="result${i}">
                     <h2 class="card-text">${quiz.question}</h2>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="answer" placeholder="Answer Here" aria-label="" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="answer${i}" placeholder="Answer Here" aria-label="" aria-describedby="basic-addon1">
                         <div class="input-group-prepend">
-                            <button class="btn btn-outline-secondary" type="button">Submit Answer</button>
+                            <button class="btn btn-outline-secondary" id="button${i}" type="button">Submit Answer</button>
                         </div>
                     </div>
                 </div>
             </div>
             `  
+        i += 1
     }
     quizQuestion.innerHTML = questionHTML
 
@@ -37,17 +39,17 @@ function displayQuestions(data) {
     for (let i = 0; i < quizAnswer.length; i++) {
         quizAnswer[i].addEventListener('click', (event) => {
             let correctAnswer = data[i].answer
-            compareResults(correctAnswer)
+            compareResults(correctAnswer, i)
         })
     }
 }   
-function compareResults(answer) {
-    let answerInput = document.getElementById('answer').value;
+function compareResults(answer, answer_num) {
+    let answerInput = document.getElementById(`answer${answer_num}`).value;
     if (answer == answerInput) {
-        document.getElementById("result").style.backgroundColor = "#29AB87";
+        document.getElementById(`result${answer_num}`).style.backgroundColor = "#29AB87";
 
     } else{
-        document.getElementById("result").style.backgroundColor = "#F08080";
+        document.getElementById(`result${answer_num}`).style.backgroundColor = "#F08080";
 
     }
 }
