@@ -1,0 +1,44 @@
+{
+    "quiz": [
+        {
+            "question": "What is the sum of 1 + 1?",
+            "answer": 2
+        },
+        {
+            "question": "What is the data type of the following: '423' ",
+            "answer": "string"
+        },
+        {
+            "question": "What is the data type of the following: 423 ",
+            "answer": "integer"
+        },
+        {
+            "question": "Camel case is practiced when naming variables in JavaScript. True or False?",
+            "answer": true
+        },
+        {
+            "question": "What language uses indetenation to define a code block?",
+            "answer": "Python"
+        },
+        {
+            "question": "What language uses curly braces to define a code block?",
+            "answer": "JavaScript"
+        },
+        {
+            "question": "Can a tuple contain different data types?\nExample: tuple:('abc', 32, True, 12.3, [1, 2, 3], 'dog')\n(yes or no) ",
+            "answer": "yes"
+        },
+        {
+            "question": "What is the output of the following:\ncolors = ['blue', 'black', 'pink', 'purple']\nconsole.log(colors[1])",
+            "answer": "black"
+        },
+        {
+            "question": "Is coding fun? The answer is yes",
+            "answer": "yes"
+        },
+        {
+            "question": "After 7 brutal weeks, do you still think it's worth working towards being a software developer? There's only one answer :)\n(yes or yes?)",
+            "answer": "yes"
+        }
+    ]
+}
