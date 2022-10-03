@@ -11,7 +11,7 @@ h1{
     text-shadow: 1px 1px 2px rgb(73, 40, 95);
 }
 
-#answer{
+input{
     text-transform:lowercase;
 }
 h2{
